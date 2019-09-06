@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>D:\carlos\educ\obj1\proyectosPrueba\viajesEnAuto\.README.md.html</title>
+<title>C:\Users\fernando\viajes-en-auto-AsamFernando\.README.md.html</title>
 
 
 <style type="text/css">
@@ -640,20 +640,21 @@ function setDocumentScrollTop(ypos)
 </head>
 <body class="markdown-body">
 <h1> <a id="viajes-en-auto" class="anchor" href="#viajes-en-auto" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Viajes en auto</h1> 
+<p><a href="https://travis-ci.org/wollok/viajesEnAuto" rel="nofollow"><img src="https://camo.githubusercontent.com/06b2fc3b1ee222a99253e04627ffe9777485619b/68747470733a2f2f7472617669732d63692e6f72672f776f6c6c6f6b2f7669616a6573456e4175746f2e7376673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://travis-ci.org/wollok/viajesEnAuto.svg?branch=master" style="max-width:100%;" /></a></p> 
 <p>La cooperativa de remiseros de Doctor Olaechea nos pide que le armemos un programa para manejar cu&aacute;nto cobrar los viajes. La cooperativa pacta con cada cliente el precio por kil&oacute;metro que le va a cobrar. Estos son los valores que arregl&oacute; con algunos clientes</p> 
 <ul> 
- <li> <strong>Ludmila</strong>: 18 pesos el kil&oacute;metro.</li> 
- <li> <strong>Ana Mar&iacute;a</strong>: 30 pesos el kil&oacute;metro.</li> 
- <li> <strong>Teresa</strong>: 22 pesos el kil&oacute;metro.</li> 
+ <li> <strong>Ludmila</strong>: 18 pesos el kil&oacute;metro, valor fijo e inamovible.</li> 
+ <li> <strong>Ana Mar&iacute;a</strong>: 30 pesos el kil&oacute;metro si est&aacute; econ&oacute;micamente estable, 25 pesos el kil&oacute;metro en caso contrario. Se sabe en cada momento si Ana Mar&iacute;a est&aacute; o no econ&oacute;micamente estable.</li> 
+ <li> <strong>Teresa</strong>: arranca en 22 pesos el kil&oacute;metro, puede cambiar a cualquier otro valor.</li> 
 </ul> 
-<p>A partir de estos valores, cada chofer tiene un margen de decisi&oacute;n sobre cu&aacute;nto cobrar un viaje. En particular:</p> 
+<p>A partir de estos valores, cada remisera tiene un margen de decisi&oacute;n sobre cu&aacute;nto cobrar un viaje. En particular:</p> 
 <ul> 
  <li> <strong>Roxana</strong> le cobra a cada cliente el precio por kil&oacute;metro que pact&oacute; con la cooperativa sin variaciones.</li> 
  <li> <strong>Gabriela</strong> le aumenta un 20%, porque su auto de alta gama.</li> 
  <li> <strong>Mariela</strong> no aplica recargo, pero establece un m&iacute;nimo de 50 pesos el viaje.</li> 
  <li> <strong>Juana</strong> por su parte, cobra 100 pesos hasta 8 kil&oacute;metros, y 200 pesos si son m&aacute;s de 8 kil&oacute;metros. A Juana no le importa lo que pact&oacute; la agencia, le cobra lo mismo a todos.</li> 
 </ul> 
-<p>Veamos cu&aacute;nto cobra cada chofer un viaje de 10 kil&oacute;metros.</p> 
+<p>Veamos cu&aacute;nto cobra cada remisera un viaje de 10 kil&oacute;metros. En lo que sigue, se supone que Ana Mar&iacute;a est&aacute; econ&oacute;micamente estable, y que no se cambi&oacute; el valor pactado con Teresa.</p> 
 <ul> 
  <li> <em>Roxana</em>: a Ludmila 180 pesos (18 * 10), a Ana Mar&iacute;a 300, a Teresa 220.</li> 
  <li> <em>Gabriela</em>: a Ludmila 216 pesos (180 * 1.2), a Ana Mar&iacute;a 360, a Teresa 264.</li> 
@@ -668,37 +669,37 @@ function setDocumentScrollTop(ypos)
  <li> <em>Juana</em>: 100 pesos a todos.</li> 
 </ul> 
 <br /> 
-<p>Se pide representar a los choferes y a los clientes, de forma tal de poder preguntarle a un chofer cu&aacute;nto le cobra a un determinado cliente por un viaje, del cual se indican los kil&oacute;metros. P.ej. <code>roxana.precioViaje(ludmila,10)</code> debe devolver 180.</p> 
+<p>Se pide representar a las remiseras y a los clientes, de forma tal de poder preguntarle a una remisera cu&aacute;nto le cobra a un determinado cliente por un viaje, del cual se indican los kil&oacute;metros. P.ej. <code>roxana.precioViaje(ludmila,10)</code> debe devolver 180.</p> 
 <br /> 
 <h2> <a id="luc&iacute;a-y-la-cadete" class="anchor" href="#luc%C3%ADa-y-la-cadete" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Luc&iacute;a y la cadete</h2> 
-<p>Agregar al modelo a la chofer Luc&iacute;a, y a la cliente Melina.</p> 
+<p>Agregar al modelo a la remisera Luc&iacute;a, y a la cliente Melina.</p> 
 <ul> 
- <li> <strong>Luc&iacute;a</strong> es una chofer que hace reemplazos, o sea, cubre los turnos que las otras remiseras se tienen que tomar por alguna raz&oacute;n. Hay que informar a qui&eacute;n est&aacute; reeemplazando Luc&iacute;a. Luc&iacute;a cobra lo mismo que el chofer al que est&aacute; reemplazando.</li> 
+ <li> <strong>Luc&iacute;a</strong> es una remisera que hace reemplazos, o sea, cubre los turnos que las otras remiseras se tienen que tomar por alguna raz&oacute;n. Hay que informar a qui&eacute;n est&aacute; reeemplazando Luc&iacute;a. Luc&iacute;a cobra lo mismo que la remisera al que est&aacute; reemplazando.</li> 
  <li> <strong>Melina</strong> es una cadeta que trabaja para los otros clientes de la remiser&iacute;a. En cada momento trabaja para un cliente, se debe informar para qui&eacute;n. El precio por kil&oacute;metro pactado con Melina es 3 pesos menos que el precio del cliente para el que est&eacute; trabajando en cada momento.</li> 
 </ul> 
-<p>P.ej. si Luc&iacute;a est&aacute; reemplazando a Mariela, y Melina est&aacute; trabajando para Ana Mar&iacute;a, entonces:</p> 
+<p>P.ej. si Luc&iacute;a est&aacute; reemplazando a Mariela, y Melina est&aacute; trabajando para Ludmila, entonces:</p> 
 <ul> 
- <li>por un viaje de 10 kil&oacute;metros Luc&iacute;a le cobra a Mariela 270 pesos (el precio por kil&oacute;metro es 27, tres menos que lo que se pact&oacute; con Ana Mar&iacute;a).</li> 
+ <li>por un viaje de 10 kil&oacute;metros Luc&iacute;a le cobra a Melina 150 pesos (el precio por kil&oacute;metro es 15, tres menos que lo que se pact&oacute; con Ludmila).</li> 
  <li>por un viaje de 1 kil&oacute;metro le va a cobrar 50 pesos, que es el m&iacute;nimo que establece Mariela.</li> 
 </ul> 
-<p>Si en cambio Luc&iacute;a est&aacute; reemplazando a Gabriela, y manteniendo que Melina trabaja para Ana Mar&iacute;a, entonces los valores para 10 y 1 km son 324 y 32.4, porque corre el 20% de recargo que establece Gabriela.</p> 
+<p>Si en cambio Luc&iacute;a est&aacute; reemplazando a Gabriela, y manteniendo que Melina trabaja para Ludmila, entonces los valores para 10 y 1 km son 216 y 21.6, porque corre el 20% de recargo que establece Gabriela.</p> 
 <br /> 
 <h2> <a id="oficina-de-la-cooperativa" class="anchor" href="#oficina-de-la-cooperativa" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Oficina de la cooperativa</h2> 
 <p>Agregar al modelo un objeto que represente a la oficina desde la que la cooperativa despacha viajes.</p> 
-<p>En este modelo simplificado, cuando la oficina recibe un viaje, hay dos choferes que pueden tomarlo: uno que tiene prioridad (al que llamaremos <em>primera opci&oacute;n</em> o <em>primer chofer</em>) y otro que es la <em>segunda opci&oacute;n</em> (o <em>segundo chofer</em>).</p> 
+<p>En este modelo simplificado, cuando la oficina recibe un viaje, hay dos remiseras que pueden tomarlo: uno que tiene prioridad (al que llamaremos <em>primera opci&oacute;n</em> o <em>primera remisera</em>) y otro que es la <em>segunda opci&oacute;n</em> (o <em>segunda remisera</em>).</p> 
 <p>El objeto <code>oficina</code> debe entender estos mensajes:</p> 
 <ul> 
- <li> <code>asignarChoferes(chofer1, chofer2)</code>: establece los choferes de primera y de segunda opci&oacute;n.</li> 
- <li> <code>cambiarPrimerChoferPor(chofer)</code>: cambia el chofer de primera opci&oacute;n por el que se indica.</li> 
- <li> <code>cambiarSegundoChoferPor(chofer)</code>: cambia el chofer de segunda opci&oacute;n por el que se indica.</li> 
- <li> <code>intercambiarChoferes()</code>: intercambia los choferes de primera y segunda opci&oacute;n. O sea, el que era primera pasa a segunda, y viceversa.</li> 
- <li> <code>choferElegidoParaViaje(cliente, kms)</code>: devuelve el chofer que corresponde asignar a un viaje, dados el cliente y la cantidad de kil&oacute;metros. El criterio es el siguiente: si para ese viaje, el precio del segundo chofer es menor al del primero con una diferencia de m&aacute;s de 30 pesos, entonces se elige el segundo chofer; si no, se elige el primero.</li> 
+ <li> <code>asignarRemiseras(remisera1, remisera2)</code>: establece las remiseras de primera y de segunda opci&oacute;n.</li> 
+ <li> <code>cambiarPrimerRemiserarPor(remisera)</code>: cambia la remisera de primera opci&oacute;n por el que se indica.</li> 
+ <li> <code>cambiarSegundoRemiseraPor(remisera)</code>: cambia la remisera de segunda opci&oacute;n por el que se indica.</li> 
+ <li> <code>intercambiarRemiseras()</code>: intercambia las remiseras de primera y segunda opci&oacute;n. O sea, la que era primera pasa a segunda, y viceversa.</li> 
+ <li> <code>remiseraElegidaParaViaje(cliente, kms)</code>: devuelve la remisera que corresponde asignar a un viaje, dados el cliente y la cantidad de kil&oacute;metros. El criterio es el siguiente: si para ese viaje, el precio de la segunda remisera es menor al de l primera con una diferencia de m&aacute;s de 30 pesos, entonces se elige la segunda remisera; si no, se elige el primero.</li> 
 </ul> 
-<p>Supongamos que en un momento dado el chofer de primera opci&oacute;n es Roxana, y el de segunda opci&oacute;n es Juana. En este caso</p> 
+<p>Supongamos que en un momento dado la remisera de primera opci&oacute;n es Roxana, y el de segunda opci&oacute;n es Juana. En este caso</p> 
 <ul> 
- <li>para un viaje de 10 kil&oacute;metros para Ana Mar&iacute;a, el chofer elegido es Juana, porque su precio de 200 pesos, es menor al de Roxana (300 pesos), y la diferencia es de m&aacute;s de 30 pesos.</li> 
- <li>si el viaje es para Teresa, entonces Roxana ofrece 220 pesos y Juana 200. El precio de Juana es menor, pero la diferencia no llega a 30 pesos. Por lo tanto, el chofer elegido es Roxana.</li> 
- <li>si el viaje es de 4 kil&oacute;metros para Teresa, entonces Roxana cobra 88 pesos y Juana 100. El precio de Roxana es menor, por lo tanto ella es la elegida.</li> 
+ <li>para un viaje de 10 kil&oacute;metros para Ana Mar&iacute;a, la remisera elegida es Juana, porque su precio de 200 pesos, es menor al de Roxana (300 pesos), y la diferencia es de m&aacute;s de 30 pesos.</li> 
+ <li>si el viaje es para Teresa, entonces Roxana ofrece 220 pesos y Juana 200. El precio de Juana es menor, pero la diferencia no llega a 30 pesos. Por lo tanto, la remisera elegido es Roxana.</li> 
+ <li>si el viaje es de 4 kil&oacute;metros para Teresa, entonces Roxana cobra 88 pesos y Juana 100. El precio de Roxana es menor pero la diferencia no es mayor a 30, por lo tanto Juana es la elegida.</li> 
 </ul>
 </body>
 </html>
