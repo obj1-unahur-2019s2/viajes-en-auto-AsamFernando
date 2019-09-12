@@ -11,13 +11,11 @@ object ludmila {
 }
 
 object anaMaria {
-	var property estable=true
-	var valorKm
+	var property estable=true 
 	
 	method pagaXKm() {
-		if(estable) { valorKm=30 }
-		else { valorKm=25 }
-		return valorKm
+		if(estable) { return 30}
+		else { return 25 }
 	}
 }
 
@@ -29,57 +27,27 @@ object teresa {
 //Remiseras
 
 object roxana {
-	var valorDelViaje=0
-	method llevar(cliente, kms) {
-		valorDelViaje=cliente.pagaXKm()*kms
-	}
 	method costoDelViaje(cliente, kms) {
-		self.llevar(cliente, kms)
-		return valorDelViaje
+		return cliente.pagaXKm()*kms
 	}
 }
 
 object gabriela {
-	var valorDelViaje=0
-	
-	method llevar(cliente, kms) {
-		valorDelViaje=(cliente.pagaXKm()*kms)*1.2
-	}
 	method costoDelViaje(cliente, kms) {
-		self.llevar(cliente, kms)
-		return valorDelViaje
+		return (cliente.pagaXKm()*kms)*1.2
 	}
 }
 
 object mariela {
-	var valorDelViaje
-	
-	method llevar(cliente, kms) {
-		var monto=cliente.pagaXKm()*kms
-		
-		if (monto>=50) {
-			valorDelViaje=monto
-		}
-		else { valorDelViaje=50 }
-	}
 	method costoDelViaje(cliente, kms) {
-		self.llevar(cliente, kms)
-		return valorDelViaje
+		return 50.max(cliente.pagaXKm()*kms)
 	}
 }
 
 object juana {
-	var valorDelViaje
-	
-	method llevar(cliente, kms) {
-		if(kms<=8) {
-			valorDelViaje=100
-		}
-		else { valorDelViaje=200}
-	}
 	method costoDelViaje(cliente, kms) {
-		self.llevar(cliente, kms)
-		return valorDelViaje
+		if(kms<=8) { return 100 }
+		else { return 200 }
 	}
 }
 
